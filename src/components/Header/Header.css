@@ -3,3 +3,10 @@ nav a{
     text-decoration: none;
     
 }
+
+nav a.active{
+    color: red;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+}
