@@ -1,10 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./User.css"
 
 const User = ({user}) => {
 
 
     const {id,name,phone,email}=user;
+
+    
+    const navigate = useNavigate();
+
+    const handleShowDetails = () =>{
+        
+        navigate(`/user/${id}`)
+    }
 
 
 
@@ -17,6 +25,8 @@ const User = ({user}) => {
             <button>show me details</button>
             
             </Link>
+
+           <button onClick={handleShowDetails}>Click me</button>
         </div>
     );
 };
